@@ -4,7 +4,10 @@
     const os = require('os');
     const spawn = require('child_process').execFile;
 
-    const validPayloads = ["kill", "force_kill"];
+    const validPayloads = [
+        "kill", "force_kill",
+        "kill_exe", "force_kill_exe"
+        ];
 
     module.exports = (context) => {
         const { toast, app } = context;
@@ -15,6 +18,20 @@
             if (!trimmedQuery.length) {
                 return;
             }
+
+            res.add({
+                id: "kill_exe",
+                payload: `${trimmedQuery}.exe`,
+                title: `${trimmedQuery}.exe`,
+                desc: "Kill process"
+            });
+
+            res.add({
+                id: "force_kill_exe",
+                payload: `${trimmedQuery}.exe`,
+                title: `${trimmedQuery}.exe`,
+                desc: "Force kill process"
+            });
 
             res.add({
                 id: "kill",
@@ -38,7 +55,7 @@
 
             const args = ["/im", payload];
 
-            if (id === "force_kill") {
+            if (id === "force_kill" || id === "force_kill_exe") {
                 args.push("/f");
             }
 
