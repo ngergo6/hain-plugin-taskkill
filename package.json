@@ -1,6 +1,6 @@
 {
   "name": "hain-plugin-taskkill",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Task killer plugin for Hain",
   "main": "index.js",
   "scripts": {

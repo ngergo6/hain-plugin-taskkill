@@ -31,7 +31,7 @@
 
         function execute(id, payload) {
             if (id !== "kill" || id !== "force_kill") {
-                toast.enqueue("nope.jpg");
+                toast.enqueue(`nope.jpg, id: ${id}, payload: ${payload}`);
                 return;
             }
 
