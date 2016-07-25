@@ -1,0 +1,30 @@
+{
+  "name": "hain-plugin-taskkill",
+  "version": "0.0.1",
+  "description": "Task killer plugin for Hain",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ngergo6/hain-plugin-taskkill.git"
+  },
+  "keywords": [
+    "hain",
+    "plugin",
+    "hain0"
+  ],
+  "author": "ngergo6",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/ngergo6/hain-plugin-taskkill/issues"
+  },
+  "homepage": "https://github.com/ngergo6/hain-plugin-taskkill#readme",
+  "hain": {
+    "prefix": "/kill",
+    "usage": "/kill taskname",
+    "icon": "#fa #fa-fire-extinguisher",
+    "redirect": "/kill "
+  }
+}
