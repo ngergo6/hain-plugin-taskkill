@@ -7,7 +7,7 @@
     const validPayloads = ["kill", "force_kill"];
 
     module.exports = (context) => {
-        const { toast } = context;
+        const { toast, app } = context;
 
         function search(query, res) {
             const trimmedQuery = query.trim();
@@ -49,6 +49,8 @@
             });
 
             child.unref();
+
+            app.close();
         }
 
         return { search, execute };
