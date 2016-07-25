@@ -13,28 +13,28 @@
             }
 
             res.add({
-                id: trimmedQuery,
-                payload: "kill",
+                id: "kill",
+                payload: trimmedQuery,
                 title: trimmedQuery,
                 desc: "Kill process"
             });
 
             res.add({
-                id: trimmedQuery,
-                payload: "force_kill",
+                id: "force_kill",
+                payload: trimmedQuery,
                 title: trimmedQuery,
                 desc: "Force kill process"
             });
         }
 
         function execute(id, payload) {
-            if (payload !== "kill" || payload !== "force_kill") {
+            if (id !== "kill" || id !== "force_kill") {
                 return;
             }
 
-            const args = ["/im", id];
+            const args = ["/im", payload];
 
-            if (payload === "force_kill") {
+            if (id === "force_kill") {
                 args.push("/f");
             }
 
