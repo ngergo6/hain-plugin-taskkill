@@ -5,6 +5,8 @@
     const spawn = require('child_process').execFile;
 
     module.exports = (context) => {
+        const { toast } = context;
+
         function search(query, res) {
             const trimmedQuery = query.trim();
 
@@ -29,6 +31,7 @@
 
         function execute(id, payload) {
             if (id !== "kill" || id !== "force_kill") {
+                toast.enqueue("nope.jpg");
                 return;
             }
 
