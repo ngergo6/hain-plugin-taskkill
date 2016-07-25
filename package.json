@@ -1,6 +1,6 @@
 {
   "name": "hain-plugin-taskkill",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Task killer plugin for Hain",
   "main": "index.js",
   "scripts": {
@@ -24,7 +24,7 @@
   "hain": {
     "prefix": "/kill",
     "usage": "/kill taskname",
-    "icon": "#fa #fa-fire-extinguisher",
+    "icon": "#fa #fa-bomb",
     "redirect": "/kill "
   }
 }
