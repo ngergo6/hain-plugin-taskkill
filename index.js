@@ -23,28 +23,32 @@
                 id: "kill_exe",
                 payload: `${trimmedQuery}.exe`,
                 title: `${trimmedQuery}.exe`,
-                desc: "Kill process"
+                desc: "Kill process",
+                icon: "#fa fa-fire-extinguisher"
             });
 
             res.add({
                 id: "force_kill_exe",
                 payload: `${trimmedQuery}.exe`,
                 title: `${trimmedQuery}.exe`,
-                desc: "Force kill process"
+                desc: "Force kill process",
+                icon: "#fa fa-bomb"
             });
 
             res.add({
                 id: "kill",
                 payload: trimmedQuery,
                 title: trimmedQuery,
-                desc: "Kill process"
+                desc: "Kill process",
+                icon: "#fa fa-fire-extinguisher"
             });
 
             res.add({
                 id: "force_kill",
                 payload: trimmedQuery,
                 title: trimmedQuery,
-                desc: "Force kill process"
+                desc: "Force kill process",
+                icon: "#fa fa-bomb"
             });
         }
 

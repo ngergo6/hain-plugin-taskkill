@@ -24,7 +24,7 @@
   "hain": {
     "prefix": "/kill",
     "usage": "/kill taskname",
-    "icon": "#fa fa-bomb",
+    "icon": "#fa fa-fire-extinguisher",
     "redirect": "/kill "
   }
 }
