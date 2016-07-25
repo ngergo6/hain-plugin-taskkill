@@ -4,6 +4,8 @@
     const os = require('os');
     const spawn = require('child_process').execFile;
 
+    const validPayloads = ["kill", "force_kill"];
+
     module.exports = (context) => {
         const { toast } = context;
 
@@ -30,8 +32,7 @@
         }
 
         function execute(id, payload) {
-            if (id !== "kill" || id !== "force_kill") {
-                toast.enqueue(`nope.jpg, id: ${id}, payload: ${payload}`);
+            if (validPayloads.indexOf(id) === -1) {
                 return;
             }
 
